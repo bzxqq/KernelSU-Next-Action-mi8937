@@ -1,8 +1,9 @@
-# KernelSU-Next-Action
+# KernelSU-Next-Action-Mi8937
 
 只有clang-r383902b和谷歌GCC 4.9,支持编译，4.19以下的绝大多数内核，非gki内核
 支持一键集成KernelSU-Next,LXC,Kali-Nethunter
 使用anykernel3,magiskboot打包内核(需自己更改boot)
+为mi8937设备提供ksun支持
 
 使用方法
 
