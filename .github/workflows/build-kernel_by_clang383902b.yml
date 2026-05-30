@@ -90,6 +90,7 @@ jobs:
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
 
         sed -i '1i #ifndef __V4L2_MBUS_PIXELCODE_DEFINED__\n#define __V4L2_MBUS_PIXELCODE_DEFINED__\nenum v4l2_mbus_pixelcode { V4L2_MBUS_FMT_FIXED = 1 };\n#endif\n' include/soc/qcom/camera2.h
+        sed -i '/req.cpus_affine/d' drivers/scsi/ufs/ufs-qcom.c
         
             echo "CONFIG_MODULES=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
             echo "CONFIG_KSU=y" >> arch/${{ env.ARCH }}/configs/${{ env.KERNEL_CONFIG }}
